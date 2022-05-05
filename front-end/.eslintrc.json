@@ -24,6 +24,8 @@
     "react/react-in-jsx-scope": "off",
     "jsx-quotes": "off",
     "react/prop-types": "off",
-    "no-alert": "off"
+    "no-alert": "off",
+    "import/prefer-default-export": "off",
+    "no-shadow": "off"
   }
 }

@@ -1,5 +1,8 @@
+import { clearRecommendations, recommendSong } from "./cypress";
+
 describe("Top button", () => {
-  beforeEach(cy.clearRecommendations);
+  beforeEach(clearRecommendations);
+  afterEach(clearRecommendations);
 
   it("should navigate to /top if clicked", () => {
     cy.visit("/");
@@ -10,19 +13,11 @@ describe("Top button", () => {
   });
 
   it("should display songs in descending score order", () => {
-    const highScoreSong = {
-      name: "Thriller",
-      youtubeUrl: "https://www.youtube.com/watch?v=sOnqjkJTMaA",
-    };
-    cy.recommendSong(highScoreSong);
+    const highScoreSong = recommendSong();
 
     cy.contains(highScoreSong.name).get("#upvote").click();
 
-    const lowerScoreSong = {
-      name: "Billie Jean",
-      youtubeUrl: "https://www.youtube.com/watch?v=Zi_XLOBDo_Y",
-    };
-    cy.recommendSong(lowerScoreSong);
+    recommendSong();
 
     cy.visit("/top");
 

@@ -1,14 +1,11 @@
+import { clearRecommendations, recommendSong } from "./cypress";
+
 describe("Recommend a song", () => {
-  beforeEach(cy.clearRecommendations);
-  afterEach(cy.clearRecommendations);
+  beforeEach(clearRecommendations);
+  afterEach(clearRecommendations);
 
   it("should recommend song given valid inputs", () => {
-    const song = {
-      name: "One Who Craves Souls",
-      youtubeUrl: "https://www.youtube.com/watch?v=6ESqvGzdnvs",
-    };
-
-    cy.recommendSong(song);
+    const song = recommendSong();
 
     cy.contains(song.name).should("be.visible");
   });

@@ -1,4 +1,8 @@
+import { clearRecommendations, recommendSong } from "./cypress";
+
 describe("Random button", () => {
+  afterEach(clearRecommendations);
+
   it("should navigate to /random if clicked", () => {
     cy.visit("/");
 
@@ -8,7 +12,8 @@ describe("Random button", () => {
   });
 
   it("should display one recommendation", () => {
-    cy.recommendSong();
+    recommendSong();
+    recommendSong();
 
     cy.visit("/random");
 
