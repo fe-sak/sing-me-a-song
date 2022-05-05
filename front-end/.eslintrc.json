@@ -3,7 +3,12 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:cypress/recommended",
+    "prettier"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -11,13 +16,14 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "cypress"],
   "rules": {
     "func-names": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": "off",
     "react/react-in-jsx-scope": "off",
-    "quotes": ["error", "double"],
-    "jsx-quotes": ["error", "double"]
+    "jsx-quotes": "off",
+    "react/prop-types": "off",
+    "no-alert": "off"
   }
 }
