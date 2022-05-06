@@ -20,8 +20,9 @@ async function downvote(id: number) {
   if (!recommendation) throw notFoundError();
 
   await recommendationRepository.updateScore(id, "decrement");
+  console.log(recommendation.score);
 
-  if (recommendation.score < -5) {
+  if (recommendation.score - 1 < -5) {
     await recommendationRepository.remove(id);
   }
 }
