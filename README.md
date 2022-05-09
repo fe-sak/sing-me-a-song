@@ -1,7 +1,7 @@
 
 # Sing me a song
 
-<img src="https://media0.giphy.com/media/dlRKuZUuOTLYG9Qm4n/giphy.gif?cid=790b76112cf62804c3b1742a8b8dd378b97e116ab9b891ff&rid=giphy.gif" alt='' />
+<img src="https://s8.gifyu.com/images/Peek-2022-05-09-12-51.gif" alt='' />
 
 ## About this project
 
