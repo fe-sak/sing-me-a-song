@@ -148,5 +148,4 @@ command is needed:
 ```
 npm run test
 ```
-
-You can view the test coverage in "back-end/coverage/lcov-report/index.html". Open it in your browser.
+Notice a new folder "coverage" was created. Inside. there's a index.html file. Open it in your browser to view the test coverage.
