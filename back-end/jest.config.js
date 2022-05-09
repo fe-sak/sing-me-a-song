@@ -11,4 +11,6 @@ export default {
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1",
   },
+  collectCoverage: true,
+  collectCoverageFrom: ["src/services/recommendationsService.ts"],
 };
